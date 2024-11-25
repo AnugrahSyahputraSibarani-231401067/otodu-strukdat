@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-
 void loginOtodu()
 {
     // Usn & pw tersimpan di sini
