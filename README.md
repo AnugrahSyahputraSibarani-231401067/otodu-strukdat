@@ -1,2 +1,4 @@
 # otodu-strukdat
-Hai saya Edwin
+
+
+###### Projek akhir matakuliah Struktur Data
