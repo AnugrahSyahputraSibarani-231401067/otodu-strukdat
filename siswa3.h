@@ -1,9 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
-using namespace std;
-
 // Struktur data Siswa
 struct Siswa {
     string nama;
@@ -11,22 +5,22 @@ struct Siswa {
 };
 
 // Fungsi untuk menampilkan siswa di kelas
-void siswaAndaKelas(const vector<Siswa>& daftarSiswa) {
+void siswa3(const vector<Siswa>& daftarSiswa) {
     cout << "\nDaftar Siswa:" << endl;
     for (const auto& siswa : daftarSiswa) {
         cout << "- Nama: " << siswa.nama << ", Kelas: " << siswa.kelas << endl;
     }
 }
 
-int main() {
+// Fungsi utama
+void main() {
     vector<Siswa> daftarSiswa = {
-        {"Yazid", 10},
-        {"Aisyah", 11},
-        {"Ali", 12}
+        {"Budi", 1},
+        {"Caca", 2},
+        {"Andi", 4},
+        {"Abdi", 7}
     };
 
     // Memanggil fungsi tampilkanSiswa
-    siswaAndaKelas(daftarSiswa);
-
-    return 0;
+    siswa3(daftarSiswa);
 }
