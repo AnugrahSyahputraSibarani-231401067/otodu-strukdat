@@ -35,7 +35,7 @@ void login(const map<int, int>& akun) {
     }
 }
 
-voud menu() {
+void menu() {
     map<int, int> akun; // Menyimpan ID dan PIN
     int pilihan;
 
