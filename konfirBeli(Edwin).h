@@ -3,7 +3,7 @@
 #include <limits>
 using namespace std;
 
-void konfirmasiPembelian(){
+void konfirBeli(materi){ 
     int pilihan;
 
     system("cls");
