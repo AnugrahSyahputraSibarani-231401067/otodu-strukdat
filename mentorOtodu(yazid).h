@@ -1,4 +1,4 @@
-void mentorOtodu() {
+void mentorYazid() {
     int choice;
 
     do {
