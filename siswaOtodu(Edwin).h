@@ -3,7 +3,7 @@
 #include <limits>
 using namespace std;
 
-void halamanSiswa(){
+void siswaOtodu(){
     int pilihan;
     
     system("cls"); // Membersihkan layar
@@ -24,22 +24,26 @@ void halamanSiswa(){
     }
 
     switch(pilihan){
-        case 1:
+        case 1: 
+            // Beralih ke halaman beli kursus
             beliNLP();
             break;
         case 2:
+            // Beralih ke halaman pesan mentor
             pesanMentor();
             break;  
         case 3: 
+            // Beralih ke halaman riwayat NLP
             riwayatNLP();
             break;
         case 4:
+            // Beralih ke halaman awal yaitu login
             login();
             break;
         default: 
             cout << "Pilihan tidak valid! Silakan coba lagi.\n";
             getch();
-            halamansiswa();
+            siswaOtodu();
             break;
         }
         
