@@ -2,6 +2,8 @@
 #include <string>
 
 #include "registrasi_siswa.h"
-#include "login-anugrah.h"
+#include "login(anugrah).h"
 #include "halamanSiswa.h"
 #include "konfirmasiPembelian.h"
+#include "jadwal.h"
+#include "Regis.h"
