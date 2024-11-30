@@ -35,7 +35,7 @@ void login(const map<int, int>& akun) {
     }
 }
 
-int main() {
+voud menu() {
     map<int, int> akun; // Menyimpan ID dan PIN
     int pilihan;
 
@@ -59,6 +59,4 @@ int main() {
                 cout << "Pilihan tidak valid. Coba lagi.\n";
         }
     } while (pilihan != 3);
-
-    return 0;
 }
