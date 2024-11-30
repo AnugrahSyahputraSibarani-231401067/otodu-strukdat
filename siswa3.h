@@ -13,7 +13,7 @@ void siswa3(const vector<Siswa>& daftarSiswa) {
 }
 
 // Fungsi utama
-void main() {
+void siswa3() {
     vector<Siswa> daftarSiswa = {
         {"Budi", 1},
         {"Caca", 2},
