@@ -40,7 +40,7 @@ void bookingComplete(const string &jam) {
     cout << "\nKetik 1 untuk kembali ke menu awal." << endl;
 }
 
-int main() {
+void mentorAdam() {
     // Daftar jadwal mentor
     vector<string> jadwal = {
         "13:00 - 14:00",
