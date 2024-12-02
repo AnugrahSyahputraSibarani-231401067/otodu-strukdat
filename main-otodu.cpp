@@ -1,18 +1,18 @@
 #include <iostream>
 #include <string>
 
-#include "registrasi_siswa.h"
+#include "Otodu(Azlin).h"
 #include "login(anugrah).h"
-#include "halamanSiswa.h"
-#include "konfirmasiPembelian.h"
-#include "jadwal.h"
-#include "Regis.h"
-#include "DaftarMentor.h"
-#include "AntrianSiswa.h"
-#include "DaftarMenu.h"
-#include "AntrianSiswa.h"
-#include "mentorAdam.h"
+#include "daftarOtodu(Hana).h"
+#include "AntrianSiswa(hana).h"
+#include "daftarOtoduMentor(hana).h"
+#include "daftarOtoduSiswa(Yazid).h"
+#include "konfirBeli(Edwin).h"
+#include "loginOtodu(Anugrah).h"
+#include "MatematikaOtodu(Shafda).h"
+#include "mentorAdam(Azlin).h"
+#include "mentorOtodu(yazid).h"
 
 int main() {
-    menuDaftar();
+    otodu();
 }
