@@ -6,8 +6,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void loginOtodu()
-{
+void loginOtodu(){
     system("cls");
     
     // Usn & pw tersimpan di sini
@@ -22,7 +21,7 @@ void loginOtodu()
     getline(cin, password);
     cin.ignore();
 
-    siswaOtodu()
+    siswaOtodu();
 }
 #endif // LOGINOTODU_H
 

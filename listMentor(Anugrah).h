@@ -33,5 +33,4 @@ void listMentor() {
              << ", " << mentorList[i].number << " Meter" << endl;
     }
 
-    return 0;
 }

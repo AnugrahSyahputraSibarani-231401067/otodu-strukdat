@@ -1,5 +1,4 @@
 #ifndef DAFTAROTODU_H
-
 #define DAFTAROTODU_H
 
 #include <cctype> // Untuk toupper
