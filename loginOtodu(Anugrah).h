@@ -1,6 +1,8 @@
 #ifndef LOGINOTODU_H
 #define LOGINOTODU_H
 
+#include "siswaOtodu(Edwin).h"
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,6 +21,8 @@ void loginOtodu()
     cout << "Password: " << endl;
     getline(cin, password);
     cin.ignore();
+
+    siswaOtodu()
 }
 #endif // LOGINOTODU_H
 

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <conio.h>
 #include <limits>
+#include "nlpOtodu(Yazid).h"
+#include "listMentor"
 using namespace std;
 
 void siswaOtodu(){
@@ -29,7 +31,7 @@ void siswaOtodu(){
     switch(pilihan){
         case 1: 
             // Beralih ke halaman beli kursus
-            beliNLP();
+            nlpOtodu();
             break;
         case 2:
             // Beralih ke halaman pesan mentor

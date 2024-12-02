@@ -65,9 +65,3 @@ void nlpOtodu() {
 }
 
 #endif // MATEMATIKA_BAHASA_H
-
-// Fungsi utama
-int main() {
-    nlpOtodu(); // Memanggil fungsi nlpOtodu
-    return 0;
-}
