@@ -2,23 +2,24 @@
 #include <map>
 
 #include "loginOtodu(Anugrah).h"
+#include "daftarOtodu(Hana).h"
 using namespace std;
 
 void otodu() {
+    int pilihan;
     do {
-        int pilihan;
 
         system("cls");
         cout << "=============== OTODU ==============" << endl;
-        cout << "1. Daftar";
-        cout << "2. Login";
-        cout << "3. Keluar";
+        cout << "1. Daftar" << endl;
+        cout << "2. Login" << endl;
+        cout << "3. Keluar" << endl;
         cout << "Pilih (angka): ";
         cin >> pilihan;
 
         switch (pilihan) {
             case 1:
-                // daftarOtodu();
+                menuDaftar();
                 break;
             case 2:
                 loginOtodu();
