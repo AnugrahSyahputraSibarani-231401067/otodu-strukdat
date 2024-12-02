@@ -1,12 +1,17 @@
+#ifndef OTODU_H
+#define OTODU_H
+
 #include <iostream>
 #include <map>
 
 #include "loginOtodu(Anugrah).h"
+#include "daftarOtodu(Hana).h"
 using namespace std;
 
 void otodu() {
+    int pilihan;
     do {
-        int pilihan;
+        
 
         system("cls");
         cout << "=============== OTODU ==============" << endl;
@@ -18,7 +23,7 @@ void otodu() {
 
         switch (pilihan) {
             case 1:
-                // daftarOtodu();
+                menuDaftar();
                 break;
             case 2:
                 loginOtodu();
@@ -31,3 +36,4 @@ void otodu() {
         }
     } while (pilihan != 3);
 }
+#endif // OTODU_H

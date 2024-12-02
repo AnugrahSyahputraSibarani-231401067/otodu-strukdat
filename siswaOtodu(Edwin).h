@@ -1,3 +1,6 @@
+#ifndef SISWAOTODU_H
+#define SISWAOTODU_H
+
 #include <iostream>
 #include <conio.h>
 #include <limits>
@@ -48,3 +51,4 @@ void siswaOtodu(){
         }
         
 }
+#endif // SISWAOTODU_H

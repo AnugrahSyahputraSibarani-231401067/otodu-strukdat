@@ -1,3 +1,6 @@
+#ifndef SISWA3_H
+#define SISWA3_H
+
 // Struktur data Siswa
 struct Siswa {
     string nama;
@@ -24,3 +27,4 @@ void siswa3() {
     // Memanggil fungsi tampilkanSiswa
     siswa3(daftarSiswa);
 }
+#endif // SISWA3_H

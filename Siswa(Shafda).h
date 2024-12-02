@@ -1,3 +1,6 @@
+#ifndef SISWA_H
+#define SISWA_H
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -38,3 +41,4 @@ int main() {
 
     return 0;
 }
+#endif // SISWA_H

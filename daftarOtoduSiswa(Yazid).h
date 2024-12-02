@@ -103,9 +103,9 @@ void daftarOtoduSiswa() {
 }
 
 // Fungsi utama
-int main() {
-    daftarOtoduSiswa(); // Memanggil fungsi pendaftaran
-    return 0;
-}
+// int main() {
+//     daftarOtoduSiswa(); // Memanggil fungsi pendaftaran
+//     return 0;
+// }
 
 #endif // MATEMATIKA_BAHASA_H

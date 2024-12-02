@@ -1,3 +1,6 @@
+#ifndef RIWATARNLP_H
+#define RIWATARNLP_H
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -24,34 +27,35 @@ void displayHistory() {
     cout << "----------------------------------------------------------" << endl;
 }
 
-int main() {
-    int choice;
-    double angle;
+// int main() {
+//     int choice;
+//     double angle;
 
-    do {
-        cout << "\nMenu:\n";
-        cout << "1. Tampilkan Riwayat Trigonometri dalam NLP\n";
-        cout << "2. Hitung Nilai Trigonometri\n";
-        cout << "3. Keluar\n";
-        cout << "Pilih opsi: ";
-        cin >> choice;
+//     do {
+//         cout << "\nMenu:\n";
+//         cout << "1. Tampilkan Riwayat Trigonometri dalam NLP\n";
+//         cout << "2. Hitung Nilai Trigonometri\n";
+//         cout << "3. Keluar\n";
+//         cout << "Pilih opsi: ";
+//         cin >> choice;
 
-        switch (choice) {
-            case 1:
-                displayHistory();
-                break;
-            case 2:
-                cout << "Masukkan sudut dalam derajat: ";
-                cin >> angle;
-                calculateTrigonometry(angle);
-                break;
-            case 3:
-                cout << "Keluar dari program." << endl;
-                break;
-            default:
-                cout << "Pilihan tidak valid!" << endl;
-        }
-    } while (choice != 3);
+//         switch (choice) {
+//             case 1:
+//                 displayHistory();
+//                 break;
+//             case 2:
+//                 cout << "Masukkan sudut dalam derajat: ";
+//                 cin >> angle;
+//                 calculateTrigonometry(angle);
+//                 break;
+//             case 3:
+//                 cout << "Keluar dari program." << endl;
+//                 break;
+//             default:
+//                 cout << "Pilihan tidak valid!" << endl;
+//         }
+//     } while (choice != 3);
 
-    return 0;
-}
+//     return 0;
+// }
+#endif // RIWATARNLP_H

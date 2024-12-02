@@ -1,5 +1,11 @@
+#ifndef DAFTAROTODU_H
+
+#define DAFTAROTODU_H
+
 #include <cctype> // Untuk toupper
-// #include "DaftarMentor.h"
+#include "daftarOtoduMentor(Hana).h"
+#include "AntrianSiswa(hana).h"
+#include "daftarOtoduSiswa(Yazid).h"
 
 void daftarMentor() {
     string nama, username, password, gelar;
@@ -42,8 +48,9 @@ void menuDaftar() {
         daftarMentor(); // Panggil fungsi daftar mentor
     } else if (jawaban == 'S') {
         cout << "Memilih daftar sebagai siswa." << endl;
-        kelolaAntrian();
+        daftarOtoduSiswa();
     } else {
         cout << "Pilihan tidak tersedia." << endl;
     }
 }
+#endif // DAFTAROTODU_H

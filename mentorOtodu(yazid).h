@@ -1,3 +1,8 @@
+#ifndef MENTOROTODU_H
+#define MENTOROTODU_H
+#include "AntrianSiswa(hana).h"
+#include "siswa2(shafda).h"
+
 void mentorYazid() {
     int choice;
 
@@ -11,18 +16,18 @@ void mentorYazid() {
 
         switch (choice) {
             case 1:
-                siswaAnda();
+                // tampilkanDaftarSiswa(daftarSiswa);
                 break;
             case 2:
-                antrianSiswaAnda();
+                kelolaAntrian();
                 break;
-            case 3:
-                logout();
-                return; // Kembali ke fungsi pemanggil (main)
+            // case 3:
+            //     // logout();
+            //     return; // Kembali ke fungsi pemanggil (main)
             default:
                 cout << "\nPilihan tidak valid. Silakan coba lagi." << endl;
                 break;
         }
     } while (true);
 }
-
+#endif // MENTOROTODU_H

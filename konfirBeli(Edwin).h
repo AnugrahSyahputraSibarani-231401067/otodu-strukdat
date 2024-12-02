@@ -1,9 +1,12 @@
+#ifndef KONFIRBELI_H
+#define KONFIRBELI_H
+#include "Riwayat NLP(Shafda).h"
 #include <iostream>
 #include <conio.h>
 #include <limits>
 using namespace std;
 
-void konfirBeli(materi){ 
+int konfirBeli(int materi){ 
     int pilihan;
 
     system("cls");
@@ -21,18 +24,19 @@ void konfirBeli(materi){
         pilihan = 0; // Default jika input salah
     }
         
-    switch(pilihan){
-        case 1 :
-            riwayatNLP();
-            break;
-        case 2 : 
-            halamanSiswa();
-            break;
-        default: 
-            cout << "Pilihan tidak valid! Silakan coba lagi.\n";
-            getch();
-            konfirmasiPembelian();
-            break;
-    }
+    // switch(pilihan){
+    //     case 1 :
+    //         riwayatNLP();
+    //         break;
+    //     case 2 : 
+    //         halamanSiswa();
+    //         break;
+    //     default: 
+    //         cout << "Pilihan tidak valid! Silakan coba lagi.\n";
+    //         getch();
+    //         konfirmasiPembelian();
+    //         break;
+    // }
 
 }
+#endif // KONFIRBELI_H

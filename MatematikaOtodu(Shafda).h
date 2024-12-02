@@ -1,3 +1,7 @@
+#ifndef MATEMATIKAOTODU_H
+
+#define MATEMATIKAOTODU_H
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -120,7 +124,8 @@ void matematikaOtodu() {
     } while (choice != 6);
 }
 
-int main() {
-    matematikaOtodu();
-    return 0;
-}
+// int main() {
+//     matematikaOtodu();
+//     return 0;
+// }
+#endif // MATEMATIKAOTODU_H

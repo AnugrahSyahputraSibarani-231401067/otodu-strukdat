@@ -1,3 +1,6 @@
+#ifndef SISWA2_H
+#define SISWA2_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -37,26 +40,27 @@ void tambahSiswa(vector<Siswa>& daftarSiswa, const string& nama) {
     daftarSiswa.emplace_back(nama);
 }
 
-int main() {
-    vector<Siswa> daftarSiswa;
+// int main() {
+//     vector<Siswa> daftarSiswa;
 
-    tambahSiswa(daftarSiswa, "abdi");
-    tambahSiswa(daftarSiswa, "bani");
-    tambahSiswa(daftarSiswa, "budi");
-    tambahSiswa(daftarSiswa, "caca");
+//     tambahSiswa(daftarSiswa, "abdi");
+//     tambahSiswa(daftarSiswa, "bani");
+//     tambahSiswa(daftarSiswa, "budi");
+//     tambahSiswa(daftarSiswa, "caca");
 
-    urutkanSiswa(daftarSiswa);
+//     urutkanSiswa(daftarSiswa);
 
-    tampilkanDaftarSiswa(daftarSiswa);
+//     tampilkanDaftarSiswa(daftarSiswa);
 
-    string namaBaru;
-    cout << "Masukkan nama siswa baru: ";
-    getline(cin, namaBaru);
-    tambahSiswa(daftarSiswa, namaBaru);
+//     string namaBaru;
+//     cout << "Masukkan nama siswa baru: ";
+//     getline(cin, namaBaru);
+//     tambahSiswa(daftarSiswa, namaBaru);
 
-    urutkanSiswa(daftarSiswa);
+//     urutkanSiswa(daftarSiswa);
 
-    tampilkanDaftarSiswa(daftarSiswa);
+//     tampilkanDaftarSiswa(daftarSiswa);
 
-    return 0;
-}
+//     return 0;
+// }
+#endif // SISWA2_H
