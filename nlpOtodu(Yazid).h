@@ -1,3 +1,6 @@
+#ifndef MATEMATIKA_BAHASA_H
+#define MATEMATIKA_BAHASA_H
+
 #include <iostream>
 #include <conio.h>
 using namespace std;
@@ -26,10 +29,10 @@ void halamanBahasaInggris() {
     getch();
 }
 
-int main() {
+// Fungsi untuk menampilkan menu utama
+void nlpOtodu() {
     int pilihan;
-    char lanjut;
-    
+
     do {
         system("cls"); // Membersihkan layar
         cout << "=====================================\n";
@@ -41,7 +44,7 @@ int main() {
         cout << "=====================================\n";
         cout << "Pilih menu (1-3): ";
         cin >> pilihan;
-        
+
         switch(pilihan) {
             case 1:
                 halamanMatematika();
@@ -51,14 +54,20 @@ int main() {
                 break;
             case 3:
                 cout << "\nTerima kasih telah menggunakan program ini!\n";
-                return 0;
+                return; // Kembali dari fungsi nlpOtodu
             default:
                 cout << "\nPilihan tidak valid! Silakan coba lagi.\n";
                 cout << "Tekan tombol apapun untuk melanjutkan...";
                 getch();
         }
-        
-    } while (true);
-    
 
+    } while (true);
+}
+
+#endif // MATEMATIKA_BAHASA_H
+
+// Fungsi utama
+int main() {
+    nlpOtodu(); // Memanggil fungsi nlpOtodu
+    return 0;
 }
