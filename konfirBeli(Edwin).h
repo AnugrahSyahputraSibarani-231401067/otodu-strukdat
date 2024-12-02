@@ -6,7 +6,7 @@
 #include <limits>
 using namespace std;
 
-int konfirBeli(int materi){ 
+void konfirBeli(int materi){ 
     int pilihan;
 
     system("cls");

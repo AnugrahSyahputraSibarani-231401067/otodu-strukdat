@@ -11,6 +11,8 @@ void daftarMentor() {
     string nama, username, password, gelar;
     float jarak;
 
+    system("cls");
+
     cout << "======= DAFTAR OTODU =======" << endl;
     cout << "Silahkan daftar akun mentor Anda!" << endl;
 

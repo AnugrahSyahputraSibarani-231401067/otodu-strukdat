@@ -15,9 +15,9 @@ void otodu() {
 
         system("cls");
         cout << "=============== OTODU ==============" << endl;
-        cout << "1. Daftar";
-        cout << "2. Login";
-        cout << "3. Keluar";
+        cout << "1. Daftar" << endl;
+        cout << "2. Login" << endl;
+        cout << "3. Keluar" << endl;
         cout << "Pilih (angka): ";
         cin >> pilihan;
 
