@@ -82,7 +82,7 @@ void statistics() {
     cout << "Rata-rata = " << mean << endl;
 }
 
-int main() {
+void matematikaOtodu() {
     int choice;
     do {
         cout << "\nMenu:\n";
@@ -118,6 +118,9 @@ int main() {
                 cout << "Pilihan tidak valid!" << endl;
         }
     } while (choice != 6);
+}
 
+int main() {
+    matematikaOtodu();
     return 0;
 }
