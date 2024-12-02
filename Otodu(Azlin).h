@@ -1,20 +1,24 @@
 #include <iostream>
 #include <map>
+
+#include "loginOtodu(Anugrah).h"
 using namespace std;
 
 void otodu() {
     do {
+        int pilihan;
+
         system("cls");
         cout << "=============== OTODU ==============" << endl;
         cout << "1. Daftar";
-        cout << "2. Login"
+        cout << "2. Login";
         cout << "3. Keluar";
         cout << "Pilih (angka): ";
         cin >> pilihan;
 
         switch (pilihan) {
             case 1:
-                daftarOtodu();
+                // daftarOtodu();
                 break;
             case 2:
                 loginOtodu();

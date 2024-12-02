@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 void loginOtodu()
 {
     // Usn & pw tersimpan di sini
@@ -9,6 +12,4 @@ void loginOtodu()
     getline(cin, username);
     cout << "Password: ";
     getline(cin, password);
-
-    return 0;
 }
