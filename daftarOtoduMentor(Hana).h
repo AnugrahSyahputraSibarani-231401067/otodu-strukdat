@@ -7,6 +7,19 @@
 
 using namespace std;
 
+// Fungsi untuk menyimpan data mentor
+void saveMentorToFile(const string& nama, const string& username, const string& password, 
+                      const string& gelar, float jarak) {
+    ofstream file("dataMentor.txt", ios::app); // Membuka file dalam mode append
+    if (file.is_open()) {
+        file << nama << "," << username << "," << password << "," 
+             << gelar << "," << jarak << "\n";
+        file.close();
+    } else {
+        cout << "Gagal membuka file untuk menyimpan data mentor." << endl;
+    }
+}
+
 // Struct untuk data mentor
 struct mentor {
     string nama;
@@ -55,6 +68,8 @@ inline bool addmentor(const string& nama, const string& username, const string& 
         current->next = newmentor;
     }
 
+    // Simpan data ke file
+    saveMentorToFile(nama, username, password, gelar, jarak);
     return true; // Berhasil menambahkan mentor
 }
 

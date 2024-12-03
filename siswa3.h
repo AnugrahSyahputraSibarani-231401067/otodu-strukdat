@@ -26,5 +26,7 @@ void siswa3() {
 
     // Memanggil fungsi tampilkanSiswa
     siswa3(daftarSiswa);
+    cin.ignore();
+    cin.get();
 }
 #endif // SISWA3_H

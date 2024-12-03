@@ -5,7 +5,7 @@
 #include <conio.h>
 #include <limits>
 #include "nlpOtodu(Yazid).h"
-#include "listMentor.h"
+#include "listMentor(Anugrah).h"
 #include "loginOtodu(Anugrah).h"
 using namespace std;
 
@@ -40,11 +40,11 @@ void siswaOtodu(){
             break;  
         case 3: 
             // Beralih ke halaman riwayat NLP
-            riwayatNlp();
+            // riwayatNlp();
             break;
         case 4:
             // Beralih ke halaman awal yaitu login
-            loginOtodu();
+            // loginOtodu();
             break;
         default: 
             cout << "Pilihan tidak valid! Silakan coba lagi.\n";

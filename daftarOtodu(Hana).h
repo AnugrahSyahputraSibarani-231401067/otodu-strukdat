@@ -1,42 +1,60 @@
 #ifndef DAFTAROTODU_H
-
 #define DAFTAROTODU_H
 
 #include <cctype> // Untuk toupper
-#include "daftarOtoduMentor(Hana).h"
 #include "AntrianSiswa(hana).h"
+#include "daftarOtoduMentor(Hana).h"
 #include "daftarOtoduSiswa(Yazid).h"
 
 void daftarMentor() {
-    string nama, username, password, gelar;
-    float jarak;
+    char lanjut;
 
-    system("cls");
+    do {
+        string nama, username, password, gelar;
+        float jarak;
 
-    cout << "======= DAFTAR OTODU =======" << endl;
-    cout << "Silahkan daftar akun mentor Anda!" << endl;
+        system("CLS");
+        cout << "======= DAFTAR OTODU =======" << endl;
+        cout << "Silahkan daftar akun mentor Anda!" << endl;
 
-    cout << "Nama: ";
-    cin >> nama;
+        cout << "Nama: ";
+        cin.ignore();  // Menghindari masalah dengan getline setelah cin
+        getline(cin, nama);
 
-    cout << "Username: ";
-    cin >> username;
+        cout << "Username: ";
+        getline(cin, username);
 
-    cout << "Password: ";
-    cin >> password;
+        cout << "Password: ";
+        getline(cin, password);
 
-    cout << "Gelar singkat: ";
-    cin >> gelar;
+        cout << "Gelar singkat: ";
+        getline(cin, gelar);
 
-    cout << "Jarak rumah ke kantor OTODU (m): ";
-    cin >> jarak;
+        cout << "Jarak rumah ke kantor OTODU (m): ";
+        cin >> jarak;
 
-    if (addmentor(nama, username, password, gelar, jarak)) {
-        cout << "Akun berhasil didaftarkan!" << endl;
-    } else {
-        cout << "Gagal mendaftarkan akun. Username sudah digunakan." << endl;
-    }
+        system("CLS");
+        if (addmentor(nama, username, password, gelar, jarak)) {
+            cout << "\nAkun Mentor berhasil didaftarkan!" << endl;
+
+            // Menampilkan data yang sudah dimasukkan
+            cout << "\nData yang tersimpan:\n";
+            cout << "Nama: " << nama << endl;
+            cout << "Username: " << username << endl;
+            cout << "Password: " << string(password.length(), '*') << endl;
+            cout << "Gelar: " << gelar << endl;
+            cout << "Jarak: " << jarak << " meter" << endl;
+        } else {
+            cout << "Gagal mendaftarkan akun. Username sudah digunakan." << endl;
+        }
+
+        // Menanyakan apakah ingin mendaftarkan akun lain
+        cout << "\nIngin mendaftarkan akun lain? (y/n): ";
+        cin >> lanjut;
+
+    } while (lanjut == 'y' || lanjut == 'Y');
 }
+
 
 void menuDaftar() {
     char jawaban;
@@ -46,10 +64,8 @@ void menuDaftar() {
 
     jawaban = toupper(jawaban);
     if (jawaban == 'M') {
-        cout << "Memilih daftar sebagai mentor." << endl;
         daftarMentor(); // Panggil fungsi daftar mentor
     } else if (jawaban == 'S') {
-        cout << "Memilih daftar sebagai siswa." << endl;
         daftarOtoduSiswa();
     } else {
         cout << "Pilihan tidak tersedia." << endl;

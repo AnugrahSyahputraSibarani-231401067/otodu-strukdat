@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip> // For formatting
+#include <limits>  // For handling input validation
 
 using namespace std;
 
@@ -18,7 +19,7 @@ void listMentor() {
         {"adam", "S.kom", 122},
         {"dummy1", "S.sos", 121},
         {"dummy2", "S.sos", 11},
-        {"dummy2", "S.kom", 123}
+        {"dummy3", "S.kom", 123}
     };
 
     // Sort the mentor list based on the smallest number
@@ -26,12 +27,41 @@ void listMentor() {
         return a.number < b.number;
     });
 
-    // Display the sorted mentor list
-    cout << "LIST MENTOR OTODU\n";
-    for (size_t i = 0; i < mentorList.size(); ++i) {
-        cout << i + 1 << ". " << mentorList[i].name << ", " << mentorList[i].degree
-             << ", " << mentorList[i].number << " Meter" << endl;
-    }
+    char choice;
+    do {
+        // Display the sorted mentor list
+        cout << "\nLIST MENTOR OTODU\n";
+        for (size_t i = 0; i < mentorList.size(); ++i) {
+            cout << i + 1 << ". " << mentorList[i].name << ", " << mentorList[i].degree
+                 << ", " << mentorList[i].number << " Meter" << endl;
+        }
 
-    return 0;
+        // Prompt user to select a mentor
+        int mentorChoice;
+        cout << "\nPilih mentor yang ingin Anda pesan (1-" << mentorList.size() << "): ";
+        while (!(cin >> mentorChoice) || mentorChoice < 1 || mentorChoice > static_cast<int>(mentorList.size())) {
+            cin.clear(); // Clear error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            cout << "Pilihan tidak valid! Silakan masukkan angka antara 1 dan " << mentorList.size() << ": ";
+        }
+
+        // Display the chosen mentor
+        Mentor chosenMentor = mentorList[mentorChoice - 1];
+        cout << "\nAnda telah memilih mentor berikut:\n";
+        cout << "Nama: " << chosenMentor.name << "\n";
+        cout << "Gelar: " << chosenMentor.degree << "\n";
+        cout << "Jarak: " << chosenMentor.number << " Meter\n";
+        cout << "Mentor berhasil dipesan!\n";
+
+        // Ask if the user wants to choose another mentor
+        cout << "\nApakah Anda ingin memesan mentor lain? (y/n): ";
+        cin >> choice;
+        while (choice != 'y' && choice != 'n') {
+            cout << "Input tidak valid! Masukkan 'y' untuk ya atau 'n' untuk tidak: ";
+            cin >> choice;
+        }
+
+    } while (choice == 'y');
+
+    cout << "\nTerima kasih telah menggunakan layanan kami!\n";
 }

@@ -1,6 +1,5 @@
 #ifndef KONFIRBELI_H
 #define KONFIRBELI_H
-#include "Riwayat NLP(Shafda).h"
 #include <iostream>
 #include <conio.h>
 #include <limits>

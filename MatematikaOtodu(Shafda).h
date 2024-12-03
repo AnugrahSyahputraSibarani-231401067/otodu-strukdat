@@ -1,92 +1,92 @@
 #ifndef MATEMATIKAOTODU_H
-
 #define MATEMATIKAOTODU_H
 
 #include <iostream>
 #include <cmath>
 #include <vector>
 #include <iomanip>
-
+#include <stack> // Include stack to track history
+#include "Riwayat NLP(Shafda).h"
 using namespace std;
 
-void trigonometry() {
-    double angle;
-    cout << "Masukkan sudut dalam derajat: ";
-    cin >> angle;
+// void trigonometry() {
+//     double angle;
+//     cout << "Masukkan sudut dalam derajat: ";
+//     cin >> angle;
     
-    double radian = angle * (M_PI / 180.0);
+//     double radian = angle * (M_PI / 180.0);
     
-    cout << "Sin(" << angle << ") = " << sin(radian) << endl;
-    cout << "Cos(" << angle << ") = " << cos(radian) << endl;
-    cout << "Tan(" << angle << ") = " << tan(radian) << endl;
-}
+//     cout << "Sin(" << angle << ") = " << sin(radian) << endl;
+//     cout << "Cos(" << angle << ") = " << cos(radian) << endl;
+//     cout << "Tan(" << angle << ") = " << tan(radian) << endl;
+// }
 
-void limit() {
-    double x;
-    cout << "Masukkan nilai x untuk limit saat x mendekati 0 (f(x) = sin(x)/x): ";
-    cin >> x;
+// void limit() {
+//     double x;
+//     cout << "Masukkan nilai x untuk limit saat x mendekati 0 (f(x) = sin(x)/x): ";
+//     cin >> x;
     
-    if (x == 0) {
-        cout << "Limit saat x mendekati 0 adalah 1." << endl;
-    } else {
-        double limitValue = sin(x) / x;
-        cout << "Limit f(" << x << ") = " << limitValue << endl;
-    }
-}
+//     if (x == 0) {
+//         cout << "Limit saat x mendekati 0 adalah 1." << endl;
+//     } else {
+//         double limitValue = sin(x) / x;
+//         cout << "Limit f(" << x << ") = " << limitValue << endl;
+//     }
+// }
 
-void matrixOperations() {
-    int rows, cols;
-    cout << "Masukkan jumlah baris dan kolom matriks: ";
-    cin >> rows >> cols;
+// void matrixOperations() {
+//     int rows, cols;
+//     cout << "Masukkan jumlah baris dan kolom matriks: ";
+//     cin >> rows >> cols;
 
-    vector<vector<int>> matrix(rows, vector<int>(cols));
+//     vector<vector<int>> matrix(rows, vector<int>(cols));
 
-    cout << "Masukkan elemen matriks:" << endl;
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            cin >> matrix[i][j];
-        }
-    }
+//     cout << "Masukkan elemen matriks:" << endl;
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < cols; j++) {
+//             cin >> matrix[i][j];
+//         }
+//     }
 
-    cout << "Matriks yang Anda masukkan:" << endl;
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            cout << setw(4) << matrix[i][j];
-        }
-        cout << endl;
-    }
-}
+//     cout << "Matriks yang Anda masukkan:" << endl;
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < cols; j++) {
+//             cout << setw(4) << matrix[i][j];
+//         }
+//         cout << endl;
+//     }
+// }
 
-void threeDimensional() {
-    double side;
-    cout << "Masukkan panjang sisi kubus: ";
-    cin >> side;
+// void threeDimensional() {
+//     double side;
+//     cout << "Masukkan panjang sisi kubus: ";
+//     cin >> side;
     
-    double volume = pow(side, 3);
-    cout << "Volume kubus = " << volume << endl;
-}
+//     double volume = pow(side, 3);
+//     cout << "Volume kubus = " << volume << endl;
+// }
 
-void statistics() {
-    int n;
-    cout << "Masukkan jumlah data: ";
-    cin >> n;
+// void statistics() {
+//     int n;
+//     cout << "Masukkan jumlah data: ";
+//     cin >> n;
 
-    vector<double> data(n);
-    cout << "Masukkan data:" << endl;
-    for (int i = 0; i < n; i++) {
-        cin >> data[i];
-    }
+//     vector<double> data(n);
+//     cout << "Masukkan data:" << endl;
+//     for (int i = 0; i < n; i++) {
+//         cin >> data[i];
+//     }
 
-    double sum = 0;
-    for (double num : data) {
-        sum += num;
-    }
+//     double sum = 0;
+//     for (double num : data) {
+//         sum += num;
+//     }
     
-    double mean = sum / n;
-    cout << "Rata-rata = " << mean << endl;
-}
+//     double mean = sum / n;
+//     cout << "Rata-rata = " << mean << endl;
+// }
 
-void matematikaOtodu() {
+void matematikaOtodu(stack<string>& history) { // Use stack to store history
     int choice;
     do {
         cout << "\nMenu:\n";
@@ -101,19 +101,24 @@ void matematikaOtodu() {
 
         switch (choice) {
             case 1:
-                trigonometry();
+                // trigonometry();
+                history.push("Trigonometri"); // Save the choice
                 break;
             case 2:
-                limit();
+                // limit();
+                history.push("Limit"); // Save the choice
                 break;
             case 3:
-                matrixOperations();
+                // matrixOperations();
+                history.push("Matriks"); // Save the choice
                 break;
             case 4:
-                threeDimensional();
+                // threeDimensional();
+                history.push("Volume Kubus"); // Save the choice
                 break;
             case 5:
-                statistics();
+                // statistics();
+                history.push("Statistika"); // Save the choice
                 break;
             case 6:
                 cout << "Keluar dari program." << endl;
@@ -124,8 +129,4 @@ void matematikaOtodu() {
     } while (choice != 6);
 }
 
-// int main() {
-//     matematikaOtodu();
-//     return 0;
-// }
 #endif // MATEMATIKAOTODU_H
