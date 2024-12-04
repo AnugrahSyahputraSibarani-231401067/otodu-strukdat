@@ -147,7 +147,48 @@ void nlpOtodu()
             siswaOtodu();
 
         default:
-            cout << "\nPilihan tidak valid! Silakan coba lagi.\n";
+            cou#ifndef NLP_OTODU_H
+#define NLP_OTODU_H
+
+#include <iostream>
+#include <stack> // Include stack to track history
+#include "siswaOtodu(Edwin).h"
+#include <fstream> // Include fstream for logging
+using namespace std;
+
+#ifndef RIWATARNLP_H
+#define RIWATARNLP_H
+
+#include <stack> // Include stack for storing history
+
+void riwayatNlp(stack<string> &history)
+{
+    system("CLS");
+    cout << "\nRiwayat Pemilihan Menu Matematika Otodu:\n";
+
+    if (history.empty())
+    {
+        cout << "Tidak ada riwayat pemilihan.\n";
+    }
+    else
+    {
+        // Display the history from the stack without popping
+        stack<string> tempHistory = history; // Make a copy of the stack
+        while (!tempHistory.empty())
+        {
+            cout << tempHistory.top() << endl;
+            tempHistory.pop();
+        }
+    }
+}
+
+#endif // RIWATARNLP_H
+
+// Fungsi untuk halaman Matematika
+void halamanMatematika(stack<string> &history)
+{ // Use stack to store history
+    int choice;
+    ofstream logFile("log.txt", iost << "\nPilihan tidak valid! Silakan coba lagi.\n";
             cout << "Press any key to continue...";
             cin.get(); // Use cin.get() to continue
         }
