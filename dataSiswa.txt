@@ -1,2 +1,3 @@
 hana,katharine,putri,500
 cinta,cinta,cinta,90
+Edwin,edwin,12345,100
