@@ -1,4 +1,4 @@
 Anugrah,Anugrah,P,s.kom,230
 Anugrah,Anugrah,Anugrah,s.kom,250
 Anugrah,Anugrah,123,s.kom,200
-2,2,2,2,2
+2,2,2,2,2Budi,Budi1,Budi1,S.Kom,200

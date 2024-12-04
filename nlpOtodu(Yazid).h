@@ -44,14 +44,18 @@ void halamanMatematika(stack<string> &history)
     do
     {
         system("CLS");
-        cout << "\nMenu:\n";
+        cout << "=================";
+        cout << "\n       Menu     :\n";
+        cout << "=================";
         cout << "1. Trigonometri\n";
         cout << "2. Limit\n";
         cout << "3. Matriks\n";
         cout << "4. Tiga Dimensi (Volume Kubus)\n";
         cout << "5. Statistika\n";
         cout << "6. Keluar\n";
+        cout << "=================";
         cout << "Pilih opsi: ";
+        cout << "=================";
         cin >> choice;
 
         switch (choice)

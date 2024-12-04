@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <limits>  // For handling input validation
 #include "siswa3.h"  // Assuming this file exists and contains necessary code
+#include "mentorOtodu(yazid).h"
 
 using namespace std;
 
@@ -32,12 +33,12 @@ void urutkanSiswa(vector<Siswa3>& daftarSiswa) {
 }
 
 void tampilkanDaftarSiswa(const vector<Siswa3>& daftarSiswa) {
-    cout << "Daftar Siswa:\n";
+    system("cls");
+    cout << "Daftar Siswa:\n\n";
     for (const auto& siswa : daftarSiswa) {
         cout << siswa.getNama() << endl;
     }
-    cin.ignore();
-    cin.get();
+
 }
 
 void tambahSiswa(vector<Siswa3>& daftarSiswa, const string& nama) {
@@ -56,6 +57,10 @@ void pilihSiswa() {
     // Sort the siswa list based on the names
     urutkanSiswa(daftarSiswa);
     tampilkanDaftarSiswa(daftarSiswa);
+    cout << endl;
+    cout << "Ketik apapun untuk kembali";
+    getch();
+    mentorOtodu();
     
     char choice;
     do {

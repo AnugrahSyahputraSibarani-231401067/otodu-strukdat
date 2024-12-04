@@ -12,9 +12,11 @@
 #include "listMentor(Anugrah).h"
 #include "loginOtodu(Anugrah).h"
 #include "Otodu(Azlin).h"
+#include "cariMentor.h"
 using namespace std;
 
 void siswaOtodu();
+void inputAndSearch();
 stack<string> history;
 
 void riwayatNlp(stack<string> &history)
@@ -187,9 +189,10 @@ void siswaOtodu()
     cout << "1. Beli Kursus NLP\n";
     cout << "2. Pesan Mentor   \n";
     cout << "3. Riwayat NLP    \n";
-    cout << "4. Logout         \n";
+    cout << "4. Cari Mentor    \n";
+    cout << "5. Logout         \n";
     cout << "=====================================\n";
-    cout << "Pilih Menu (1-4): ";
+    cout << "Pilih Menu (1-5): ";
 
     if (!(cin >> pilihan))
     {
@@ -214,6 +217,10 @@ void siswaOtodu()
         riwayatNlp(history);
         break;
     case 4:
+        system("cls");
+        inputAndSearch(mentors);
+        break;
+    case 5:
         otodu();
         break;
     default:

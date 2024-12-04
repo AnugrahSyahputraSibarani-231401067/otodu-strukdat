@@ -14,6 +14,7 @@ struct User {
     string nama;
     string username;
     string password;
+    int kelas;
     double jarak;
 };
 
@@ -39,16 +40,18 @@ void loadSiswaFromFile() {
         while (getline(file, line)) {
             // Format: Nama,Username,Password,Jarak
             stringstream ss(line);
-            string nama, username, password, jarak;
+            string nama, username, password, kelas, jarak;
 
             getline(ss, nama, ',');
             getline(ss, username, ',');
             getline(ss, password, ',');
+            getline(ss, kelas, ',');
             getline(ss, jarak, ',');
 
             cout << "Nama: " << nama << endl;
             cout << "Username: " << username << endl;
             cout << "Password: " << string(password.length(), '*') << endl;
+            cout << "Kelas: " << kelas << endl;
             cout << "Jarak: " << jarak << " meter\n";
             cout << "-------------------------------------\n";
         }
@@ -63,7 +66,7 @@ void loadSiswaFromFile() {
 void saveSiswaToFile(const User& siswa) {
     ofstream file("dataSiswa.txt", ios::app); // Membuka file dalam mode append
     if (file.is_open()) {
-        file << siswa.nama << "," << siswa.username << "," << siswa.password << "," << siswa.jarak << "\n";
+        file << siswa.nama << "," << siswa.username << "," << siswa.password << "," <<siswa.kelas << "," << siswa.jarak << "\n";
         file.close();
     } else {
         cout << "Gagal membuka file untuk menyimpan data siswa." << endl;
@@ -107,6 +110,9 @@ void daftarOtoduSiswa() {
         cout << "Password: ";
         getline(cin, newUser.password);
 
+        cout << "Kelas: ";
+        cin >> newUser.kelas;
+
         // Input jarak dengan validasi
         do {
             cout << "Jarak antara kantor OTODU dengan rumah anda (meter): ";
@@ -133,6 +139,7 @@ void daftarOtoduSiswa() {
         cout << "Nama: " << newUser.nama << endl;
         cout << "Username: " << newUser.username << endl;
         cout << "Password: " << string(newUser.password.length(), '*') << endl;
+        cout << "Kelas: " << newUser.kelas << endl;
         cout << "Jarak: " << newUser.jarak << " meter\n";
 
         cout << "\nIngin mendaftarkan akun lain? (y/n): ";
