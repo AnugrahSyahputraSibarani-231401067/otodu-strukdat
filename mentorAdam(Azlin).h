@@ -1,3 +1,6 @@
+#ifndef MENTORADAM_H
+#define MENTORADAM_H
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -105,5 +108,6 @@ void mentorAdam() {
         }
     }
 
-    return 0;
+    // return 0;
 }
+#endif // MENTORADAM_H

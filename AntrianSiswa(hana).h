@@ -8,7 +8,7 @@
 using namespace std;
 
 // Struct untuk data siswa
-struct Siswa {
+struct Siswa2 {
     string nama;
     string waktu;
 };
@@ -16,14 +16,14 @@ struct Siswa {
 // Fungsi untuk menampilkan dan mengelola antrian siswa
 void kelolaAntrian() {
     // Array untuk menyimpan data siswa
-    Siswa siswaList[] = {
+    Siswa2 siswaList[] = {
         {"Budi", "12.00-13.00"},
         {"Siti", "13.00-14.00"},
         {"Adam", "14.00-15.00"}
     };
 
     // Queue untuk antrian siswa
-    queue<Siswa> antrian;
+    queue<Siswa2> antrian;
 
     // Memasukkan siswa ke dalam queue
     for (const auto& siswa : siswaList) {
@@ -35,9 +35,9 @@ void kelolaAntrian() {
     while (pilihan != 0) {
         cout << "Antrian Siswa OTODU:\n";
         int index = 1;
-        queue<Siswa> tempQueue = antrian; // Salinan untuk ditampilkan
+        queue<Siswa2> tempQueue = antrian; // Salinan untuk ditampilkan
         while (!tempQueue.empty()) {
-            Siswa siswa = tempQueue.front();
+            Siswa2 siswa = tempQueue.front();
             cout << index++ << ". " << siswa.nama << " (" << siswa.waktu << ")\n";
             tempQueue.pop();
         }

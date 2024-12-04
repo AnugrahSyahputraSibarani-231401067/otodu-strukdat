@@ -1,7 +1,12 @@
-void mentorYazid() {
-    int choice;
+#ifndef MENTOROTODU_H
+#define MENTOROTODU_H
+#include "AntrianSiswa(hana).h"
+#include "siswa2(shafda).h"
 
+void mentorOtodu() {
+    int choice;
     do {
+        system("CLS");
         cout << "\nMenu:" << endl;
         cout << "1. Siswa Anda" << endl;
         cout << "2. Antrian Siswa Anda" << endl;
@@ -11,14 +16,14 @@ void mentorYazid() {
 
         switch (choice) {
             case 1:
-                siswaAnda();
+                // Panggil fungsi tampilkanDaftarSiswa dengan memberikan daftar siswa
+                pilihSiswa1();
                 break;
             case 2:
-                antrianSiswaAnda();
+                kelolaAntrian();  // Pastikan fungsi kelolaAntrian() sudah didefinisikan
                 break;
             case 3:
-                logout();
-                return; // Kembali ke fungsi pemanggil (main)
+                return; // Logout, kembali ke fungsi pemanggil
             default:
                 cout << "\nPilihan tidak valid. Silakan coba lagi." << endl;
                 break;
@@ -26,3 +31,4 @@ void mentorYazid() {
     } while (true);
 }
 
+#endif // MENTOROTODU_H

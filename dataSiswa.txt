@@ -1,0 +1,3 @@
+hana,katharine,putri,500
+cinta,cinta,cinta,90
+Anugrah,Anugrah,123,200

@@ -1,3 +1,6 @@
+#ifndef OTODU_H
+#define OTODU_H
+
 #include <iostream>
 #include <map>
 
@@ -8,6 +11,7 @@ using namespace std;
 void otodu() {
     int pilihan;
     do {
+
 
         system("cls");
         cout << "=============== OTODU ==============" << endl;
@@ -32,3 +36,4 @@ void otodu() {
         }
     } while (pilihan != 3);
 }
+#endif // OTODU_H
