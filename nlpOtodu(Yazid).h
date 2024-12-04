@@ -1,9 +1,11 @@
 #ifndef NLP_OTODU_H
 #define NLP_OTODU_H
 
+
 #include <iostream>
 #include <stack> // Include stack to track history
 #include "siswaOtodu(Edwin).h"
+#include <fstream> // Include fstream for logging
 using namespace std;
 
 #ifndef RIWATARNLP_H
@@ -38,6 +40,7 @@ void riwayatNlp(stack<string> &history)
 void halamanMatematika(stack<string> &history)
 { // Use stack to store history
     int choice;
+    ofstream logFile("log.txt", ios_base::app); // Open log file in append mode
     do
     {
         system("CLS");
@@ -55,14 +58,16 @@ void halamanMatematika(stack<string> &history)
         {
         case 1:
             // trigonometry();
-            history.push("Trigonometri"); // Save the choice
+            history.push("Trigonometri");                    // Save the choice
+            logFile << "User selected Trigonometri" << endl; // Log the choice
             cout << "\nAnda telah memilih opsi, klik tombol apapun untuk lanjut.";
             cin.ignore();
             getch();
             break;
         case 2:
             // limit();
-            history.push("Limit"); // Save the choice
+            history.push("Limit");                    // Save the choice
+            logFile << "User selected Limit" << endl; // Log the choice
             cout << "\nAnda telah memilih opsi, klik tombol apapun untuk lanjut.";
             cin.ignore();
             getch();
@@ -70,36 +75,42 @@ void halamanMatematika(stack<string> &history)
 
         case 3:
             // matrixOperations();
-            history.push("Matriks"); // Save the choice
+            history.push("Matriks");                    // Save the choice
+            logFile << "User selected Matriks" << endl; // Log the choice
             cout << "\nAnda telah memilih opsi, klik tombol apapun untuk lanjut.";
             cin.ignore();
             getch();
             break;
         case 4:
             // threeDimensional();
-            history.push("Volume Kubus"); // Save the choice
+            history.push("Volume Kubus");                    // Save the choice
+            logFile << "User selected Volume Kubus" << endl; // Log the choice
             cout << "\nAnda telah memilih opsi, klik tombol apapun untuk lanjut.";
             cin.ignore();
             getch();
             break;
         case 5:
             // statistics();
-            history.push("Statistika"); // Save the choice
+            history.push("Statistika");                    // Save the choice
+            logFile << "User selected Statistika" << endl; // Log the choice
             cout << "\nAnda telah memilih opsi, klik tombol apapun untuk lanjut.";
             cin.ignore();
             getch();
             break;
         case 6:
             cout << "Keluar dari program." << endl;
+            logFile << "User exited the program" << endl; // Log the exit
             system("cls");
             break;
         default:
             cout << "Pilihan tidak valid!" << endl;
+            logFile << "Invalid choice" << endl; // Log the invalid choice
             cin.ignore();
             getch();
             break;
         }
     } while (choice != 6);
+    logFile.close(); // Close the log file
 }
 
 // Fungsi untuk halaman Bahasa Inggris
@@ -142,53 +153,13 @@ void nlpOtodu()
             halamanBahasaInggris();
             break;
         case 3:
-            cout << "\nTerima kasih telah menggunakan program ini!\n";
             system("cls"); // Kembali dari fungsi nlpOtodu
-            siswaOtodu();
+            return;
+            // break;
+            // siswaOtodu();
 
         default:
-            cou#ifndef NLP_OTODU_H
-#define NLP_OTODU_H
-
-#include <iostream>
-#include <stack> // Include stack to track history
-#include "siswaOtodu(Edwin).h"
-#include <fstream> // Include fstream for logging
-using namespace std;
-
-#ifndef RIWATARNLP_H
-#define RIWATARNLP_H
-
-#include <stack> // Include stack for storing history
-
-void riwayatNlp(stack<string> &history)
-{
-    system("CLS");
-    cout << "\nRiwayat Pemilihan Menu Matematika Otodu:\n";
-
-    if (history.empty())
-    {
-        cout << "Tidak ada riwayat pemilihan.\n";
-    }
-    else
-    {
-        // Display the history from the stack without popping
-        stack<string> tempHistory = history; // Make a copy of the stack
-        while (!tempHistory.empty())
-        {
-            cout << tempHistory.top() << endl;
-            tempHistory.pop();
-        }
-    }
-}
-
-#endif // RIWATARNLP_H
-
-// Fungsi untuk halaman Matematika
-void halamanMatematika(stack<string> &history)
-{ // Use stack to store history
-    int choice;
-    ofstream logFile("log.txt", iost << "\nPilihan tidak valid! Silakan coba lagi.\n";
+            cout << "\nPilihan tidak valid! Silakan coba lagi.\n";
             cout << "Press any key to continue...";
             cin.get(); // Use cin.get() to continue
         }

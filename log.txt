@@ -1,0 +1,43 @@
+User selected Trigonometri
+User exited the program
+User selected Trigonometri
+User exited the program
+User selected Trigonometri
+User selected Limit
+Invalid choice
+Invalid choice
+Invalid choice
+Invalid choice
+Invalid choice
+Invalid choice
+Invalid choice
+Invalid choice
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User selected Volume Kubus
+User exited the program
+User selected Trigonometri
+User selected Limit
+User selected Matriks
+User exited the program
