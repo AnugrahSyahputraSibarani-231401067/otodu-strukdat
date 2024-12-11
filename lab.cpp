@@ -421,10 +421,11 @@ int main() {
         cout << "3. Tambah Produk ke Keranjang" << endl;
         cout << "4. Lihat Keranjang Belanja" << endl;
         cout << "5. Hapus Produk dari Keranjang" << endl;
-        cout << "6. Checkout" << endl;
-        cout << "7. Lihat Riwayat Transaksi" << endl;
-        cout << "8. Lihat Detail Transaksi" << endl;
-        cout << "9. Keluar" << endl;
+        cout << "6. Hitung Ongkos Kirim" << endl;
+        cout << "7. Checkout" << endl;
+        cout << "8. Lihat Riwayat Transaksi" << endl;
+        cout << "9. Lihat Detail Transaksi" << endl;
+        cout << "10. Keluar" << endl;
         cout << "Pilihan Anda: ";
         cin >> choice;
 
@@ -449,17 +450,24 @@ int main() {
                 removeFromCart();
                 break;
             case 6:
-                checkout();
+                int kota,ongkir;
+                cout << "Masukkan nomor kota yang dituju: ";
+                cin >> kota;
+                ongkir = hitungOngkir(kota);
+                cout << "Harga dari toko ke kota " << kota << " = " << ongkir << "\n";
                 break;
             case 7:
-                viewTransactionHistory();
+                checkout();
                 break;
             case 8:
+                viewTransactionHistory();
+                break;
+            case 9:
                 cout << "Masukkan ID transaksi: ";
                 cin >> id;
                 viewTransactionDetails(id);
                 break;
-            case 9:
+            case 10:
                 cout << "Terima kasih telah menggunakan toko online kami!" << endl;
                 return 0;
             default:
