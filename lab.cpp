@@ -1,10 +1,11 @@
 #include <iostream>
-#include <vector>
 #include <string>
-#include <unordered_map>
 #include <algorithm>
 
 using namespace std;
+
+// Maksimum jumlah produk
+const int MAX_PRODUCTS = 20;
 
 // Struktur produk
 struct Product {
@@ -14,8 +15,8 @@ struct Product {
     int price;
 };
 
-// Data produk
-vector<Product> products = {
+// Data produk (menggunakan array)
+Product products[MAX_PRODUCTS] = {
     {1, "Smartphone Samsung Galaxy S23", "Elektronik", 12000000},
     {2, "Laptop ASUS ROG Zephyrus G14", "Elektronik", 25000000},
     {3, "TV LED LG 43 Inch", "Elektronik", 6500000},
@@ -38,60 +39,65 @@ vector<Product> products = {
     {20, "Teh Kotak Sosro 500ml", "Konsumsi", 7500}
 };
 
-// Array keranjang belanja
-vector<int> cart;
+// Array untuk keranjang belanja
+int cart[MAX_PRODUCTS];
+int cartSize = 0;
 
 // Fungsi untuk menampilkan semua produk
 void displayProducts() {
     cout << "ID\tNama Produk\t\t\tKategori\tHarga (Rp)" << endl;
-    for (const auto &product : products) {
-        cout << product.id << "\t" << product.name << "\t" << product.category << "\t" << product.price << endl;
+    for (int i = 0; i < MAX_PRODUCTS; i++) {
+        cout << products[i].id << "\t" << products[i].name << "\t" 
+             << products[i].category << "\t" << products[i].price << endl;
     }
 }
 
 // Fungsi mencari produk berdasarkan ID
 void searchProductByID(int id) {
-    auto it = find_if(products.begin(), products.end(), [id](const Product &p) {
-        return p.id == id;
-    });
-
-    if (it != products.end()) {
-        cout << "Produk ditemukan: " << it->name << " - Rp. " << it->price << endl;
-    } else {
+    bool found = false;
+    for (int i = 0; i < MAX_PRODUCTS; i++) {
+        if (products[i].id == id) {
+            cout << "Produk ditemukan: " << products[i].name 
+                 << " - Rp. " << products[i].price << endl;
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
         cout << "Produk dengan ID " << id << " tidak ditemukan." << endl;
     }
 }
 
 // Fungsi menambahkan produk ke keranjang
 void addToCart(int id) {
-    auto it = find_if(products.begin(), products.end(), [id](const Product &p) {
-        return p.id == id;
-    });
-
-    if (it != products.end()) {
-        cart.push_back(id);
-        cout << "Produk " << it->name << " berhasil ditambahkan ke keranjang." << endl;
-    } else {
-        cout << "Produk dengan ID " << id << " tidak ditemukan." << endl;
+    for (int i = 0; i < MAX_PRODUCTS; i++) {
+        if (products[i].id == id) {
+            cart[cartSize] = id;
+            cartSize++;
+            cout << "Produk " << products[i].name 
+                 << " berhasil ditambahkan ke keranjang." << endl;
+            return;
+        }
     }
+    cout << "Produk dengan ID " << id << " tidak ditemukan." << endl;
 }
 
 // Fungsi melihat keranjang
 void viewCart() {
-    if (cart.empty()) {
+    if (cartSize == 0) {
         cout << "Keranjang belanja kosong." << endl;
         return;
     }
 
     cout << "ID\tNama Produk\t\t\tHarga (Rp)" << endl;
     int total = 0;
-    for (int id : cart) {
-        auto it = find_if(products.begin(), products.end(), [id](const Product &p) {
-            return p.id == id;
-        });
-        if (it != products.end()) {
-            cout << it->id << "\t" << it->name << "\t" << it->price << endl;
-            total += it->price;
+    for (int i = 0; i < cartSize; i++) {
+        for (int j = 0; j < MAX_PRODUCTS; j++) {
+            if (products[j].id == cart[i]) {
+                cout << products[j].id << "\t" << products[j].name 
+                     << "\t" << products[j].price << endl;
+                total += products[j].price;
+            }
         }
     }
     cout << "Total: Rp. " << total << endl;
